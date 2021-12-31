@@ -36,7 +36,12 @@ export default new Router({
     name: 'RegisterShipper',
 
     component: () => import(/* webpackChunkName: "about" */ '../views/RegisterShipper.vue')
-  }
+  },
+  {
+    path: '/register-shop',
+    name: 'RegisterShop',
 
+    component: () => import(/* webpackChunkName: "about" */ '../views/Shop.vue')
+  }
   ]
 })
