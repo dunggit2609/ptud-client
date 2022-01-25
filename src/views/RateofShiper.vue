@@ -47,7 +47,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;

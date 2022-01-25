@@ -185,7 +185,7 @@ export default {
   height: 40px;
 }
 </style>
-<style>
+<style scoped>
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;
