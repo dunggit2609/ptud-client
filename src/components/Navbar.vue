@@ -65,10 +65,13 @@ export default {
     navbar_carts_length: function () {
       return this.pass_carts_length;
     },
+    is_customer() {
+      return this.$route.query.type === "customer";
+    },
     isShipper() {
       const shipper = localStorage.getItem("accountType");
       return shipper && shipper === "shipper";
-    }
-  }
+    },
+  },
 };
 </script>
