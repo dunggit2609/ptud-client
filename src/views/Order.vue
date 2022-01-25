@@ -107,16 +107,20 @@ export default {
     timmer: "",
     newOrder: [],
     visible: false,
-    isLoading: false
+    isLoading: false,
+    isFirstTime: true
   }),
   methods: {
     ...mapMutations("shipper", ["setLoading"]),
 
     async initData() {
-      this.setLoading(true);
+      if (this.isFirstTime) {
+        this.setLoading(true);
+      }
       const rs = await orderService.getAll();
       if (!rs) {
         this.setLoading(false);
+        this.isFirstTime = false;
         return;
       }
 
@@ -130,6 +134,7 @@ export default {
         this.visible = true;
       }
       this.setLoading(false);
+      this.isFirstTime = false;
     },
     handleRefreshOrder() {
       this.timmer = setInterval(() => {
