@@ -2,7 +2,7 @@
   <div>
     <a-table
       :columns="columns"
-      :data-source="orders"
+      :data-source="filterOrder"
       :scroll="{ x: 100 + '%', y: 500 + 'px' }"
     >
       <span slot="status" slot-scope="status">
@@ -108,7 +108,7 @@ export default {
     newOrder: [],
     visible: false,
     isLoading: false,
-    isFirstTime: true
+    isFirstTime: true,
   }),
   methods: {
     ...mapMutations("shipper", ["setLoading"]),
@@ -207,6 +207,11 @@ export default {
         this.$message["error"]("Cancel failed", 3);
         this.isLoading = false;
       }
+    }
+  },
+  computed: {
+    filterOrder() {
+      return this.orders.filter(x => [-2, -3, -4, 2, 3, 4].includes(x.status))
     }
   },
   mounted() {
