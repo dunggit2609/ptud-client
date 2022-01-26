@@ -18,7 +18,7 @@ const shipperService = {
     return axiosClient.post(url, data);
   },
   update(id, payload) {
-    return axiosClient.put(`${url}/${id}`, payload);
+    return axiosClient.put(`${url}/${shipperId}`, payload);
   },
   getAll() {
     return axiosClient.get(url);
