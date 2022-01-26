@@ -186,8 +186,9 @@ export default {
 
         this.isLoading = false;
         this.visible = false;
-        this.initData();
-        this.handleRefreshOrder();
+        // this.initData();
+        // this.handleRefreshOrder();
+        this.$router.push({path: `/order/${orderId}` })
       } catch (err) {
         this.$message["error"]("Confirm failed", 3);
         this.isLoading = false;

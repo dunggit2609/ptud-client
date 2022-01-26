@@ -349,10 +349,6 @@ export default {
       }
       this.setLoading(true);
       const rs = await orderService.javaUpdateStatus(id, status);
-      if (!rs) {
-        this.setLoading(false);
-        return;
-      }
       this.initData();
       this.setLoading(false);
     },
