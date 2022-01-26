@@ -289,7 +289,10 @@ export default {
             msg = "Register failed";
           }
           this.$message[type](msg, 3);
+          if (!this.isEditPage) {
           this.$router.push({ name: "LoginShipper" });
+
+          }
         } catch (error) {
           this.setLoading(false);
         }
