@@ -130,5 +130,17 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "about" */ "../views/IncomeShipper.vue")
     },
+    {
+      path: "/income-shipper",
+      name: "IncomeShipper",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/IncomeShipper.vue")
+    },
+    {
+      path: "/register-shop",
+      name: "RegisterShop",
+      component: () =>
+          import ( /* webpackChunkName: "about" */ "../views/ShopRegister.vue")
+  },
   ]
 });

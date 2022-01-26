@@ -1,7 +1,6 @@
 import axiosClient from "./axiosClient";
 
-const url = "https://localhost:5001/api/Shop";
-// const url = "https://ptud-dotnet-server.herokuapp.com/api/Order";
+const url = "https://ptud-dotnet-server.herokuapp.com/api/Order";
 const shopService = {
   create(payload) {
     return axiosClient.post(`${url}`, payload);

@@ -36,6 +36,9 @@
     <b-navbar-nav>
       <b-nav-item :to="{ name: 'OrderList' }">Đơn hàng</b-nav-item>
     </b-navbar-nav>
+    <b-navbar-nav>
+      <b-nav-item :to="{ name: 'RegisterShop' }">Đăng ký shop</b-nav-item>
+    </b-navbar-nav>
 
     <b-navbar-brand
       v-if="!isShipper"
